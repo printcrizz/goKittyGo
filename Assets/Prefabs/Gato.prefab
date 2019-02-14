@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114111152997831536}
   m_Layer: 0
   m_Name: Gato
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,13 +55,13 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.3
+  m_GravityScale: 0.25
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!61 &61527507312803958
@@ -76,7 +76,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -87,8 +87,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.28, y: 0.65}
-  m_EdgeRadius: 0.04
+  m_Size: {x: 0.28, y: 0.52}
+  m_EdgeRadius: 0
 --- !u!95 &95022025986986656
 Animator:
   serializedVersion: 3
@@ -118,10 +118,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b8fa0f57df5c4ffb9b409835a0de63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 25
-  yRotation: 15
-  leftDegree: -10
-  rightDegree: 10
+  velocity: 75
+  yRotation: 0
+  leftDegree: -15
+  rightDegree: 15
   zDegree: 5
 --- !u!212 &212291044839465830
 SpriteRenderer:
