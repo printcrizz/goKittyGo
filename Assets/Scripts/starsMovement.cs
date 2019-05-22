@@ -11,7 +11,7 @@ public class starsMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(0, speed, 0);
+        transform.Translate(0, speed * Time.deltaTime, 0);
 
         //transform.position = new Vector3(transform.position.x , transform.position.y * speed,transform.position.z);
     }

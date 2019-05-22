@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: {fileID: 0}
-  InvokeRate: 2.8
+  InvokeRate: 2
   cube:
   - {fileID: 1577161150423332, guid: d4cd8d031582949c195a5b808988be8f, type: 2}
   - {fileID: 1789178899583104, guid: 7e6a3d25557ff4ff7a4bd24ee1abd45d, type: 2}

@@ -24,14 +24,7 @@ public class CatMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(1))
-        //{
-          //  RightButton();
-        //}
-        //if (Input.GetMouseButtonDown(0))
-        //{
-          //  LeftButton();
-    //    }
+      
     }
 
     public void LeftButton()
