@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class GameMaster : MonoBehaviour
     public static GameMaster instance;
     public GameObject gameOverText;
     public bool gameOver = false;
-    public float scrollSpeed = -1.5f;
-    public float scrollSpeed2 = -2f;
+    public float scrollSpeed;
+    public float scrollSpeed2;
+    public GameObject PantallaMuerte;
+    public GameObject score;
 
     public GameObject FlyingCat;
     public int time = -1;
@@ -20,6 +23,7 @@ public class GameMaster : MonoBehaviour
     public GameObject prefab2;
     public GameObject prefab3;
     // Use this for initialization
+    private Text scoore;
 
     void Awake()
     {
@@ -36,6 +40,8 @@ public class GameMaster : MonoBehaviour
     {
         Coroutina = Clock();
         StartCoroutine(Coroutina);
+        scoore = score.GetComponent<Text>();
+        
     }
 
     void Update()
@@ -45,18 +51,28 @@ public class GameMaster : MonoBehaviour
 
     private IEnumerator Clock()
     {
-        while (true)
+        while (!gameOver)
         {
             time++;
-            Debug.Log("tiempo: " + time);
-            this.puntaje.text = time.ToString();
+            //Debug.Log("tiempo: " + time);
+            puntaje.text = time.ToString();
             yield return new WaitForSeconds(2.0f);
         }
     }
 
     public void CatDied(){
-        gameOverText.SetActive (true);
+       // gameOverText.SetActive (true);
         gameOver = true;
+        scoore.text = puntaje.text;
+        PantallaMuerte.SetActive(true);
+        puntaje.gameObject.SetActive(false);
+
+        //GO.SetActive(true);
+
     }
- 
+    public void CargaEscena()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }
