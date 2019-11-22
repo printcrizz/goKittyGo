@@ -66,7 +66,7 @@ public class GameMaster : MonoBehaviour
         scoore.text = puntaje.text;
         PantallaMuerte.SetActive(true);
         puntaje.gameObject.SetActive(false);
-
+        GetComponentInChildren<HighScores>().UpdateHS();
         //GO.SetActive(true);
 
     }

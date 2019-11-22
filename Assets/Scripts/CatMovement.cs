@@ -17,6 +17,7 @@ public class CatMovement : MonoBehaviour
     bool isLeft;
 
     public GameMaster GM;
+    public AudioSource pepinoHit;
 
     public bool PresionBotonIzquierdo;
     public bool PresionBotonDerecho;
@@ -86,7 +87,7 @@ public class CatMovement : MonoBehaviour
             Debug.Log("YOU DIED!");
             GetComponent<BoxCollider2D>().enabled=false;
             ButtonActive = false;
-
+            pepinoHit.Play();
             coroutine = WaitAndPrint(1.0f);
             StartCoroutine(coroutine);
 
